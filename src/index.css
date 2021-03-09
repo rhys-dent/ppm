@@ -1,13 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.silver-text {
+  background: linear-gradient(to right, darkgrey 20%, white 50%, darkgrey 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.gold-text {
+  background: linear-gradient(
+    to right,
+    black 0%,
+    gold 5%,
+    gold 45%,
+    whitesmoke 50%,
+    gold 55%,
+    gold 95%,
+    black 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.box-shadow-outline {
+  box-shadow: 0 0 8px black;
+}
+.box-whitesmoke-shadow-outline {
+  box-shadow: 0 0 16px whitesmoke;
+}
+.white-smoke-title {
+  color: whitesmoke;
+  text-shadow: 1px 1px 2px black;
+}
+.main-title {
+  font-size: 2rem;
+  padding: 2rem;
+  text-align: center;
+  color: whitesmoke;
+  text-shadow: 1px 1px 2px black;
+}
+.frosted-glass {
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  box-shadow: 0 0 8px black;
+}
+.frosted-glass-black {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 8px whitesmoke;
 }
