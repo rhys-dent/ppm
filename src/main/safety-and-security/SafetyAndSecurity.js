@@ -19,7 +19,7 @@ export default function () {
   const context = useContext(Context);
   return (
     <SafetyAndSecurityS>
-      <h1 className="main-title">Pricing</h1>
+      <h1 className="main-title">Safety and Security</h1>
       {context.safetyAndSecurity.map((securitySystem) => (
         <SecuritySystem {...securitySystem} />
       ))}

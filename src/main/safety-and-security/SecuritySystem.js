@@ -7,13 +7,12 @@ const SecuritySystemS = styled.section`
   margin: 0 auto;
 `;
 const InnerS = styled.div`
-  height: 50%;
+  min-height: 50%;
   padding: 5%;
   div {
     padding-top: 1rem;
   }
 `;
-
 export default function ({ title, text }) {
   return (
     <SecuritySystemS>

@@ -8,12 +8,22 @@ const NavS = styled.nav`
   position: fixed;
   height: ${(props) => props.theme.main.height};
   width: ${(props) => props.theme.main.ourServices.nav.width};
+  left: -${(props) => props.theme.main.ourServices.nav.width};
   background: linear-gradient(to right, black 0%, #515151 50%, black 100%);
   text-align: center;
   box-shadow: 8px 0px 4px black;
+  animation: anim 1s 0s forwards;
+  @keyframes anim {
+    0% {
+    }
+    100% {
+      left: 0;
+    }
+  }
   h2 {
     padding-top: 2rem;
     margin: 0 auto;
+    left: 0;
   }
 `;
 const MenuS = styled.section`

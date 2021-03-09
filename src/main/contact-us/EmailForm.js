@@ -19,9 +19,10 @@ const EmailFormS = styled.form`
     padding: 1rem;
   }
   button {
-    width: 100%;
-    margin: 0 auto;
-    padding: 1rem;
+    text-align: center;
+    width: 25%;
+    margin-left: 37.5%;
+    padding: 0;
   }
 `;
 
@@ -34,7 +35,6 @@ export default function () {
         <input type="text" placeholder="Email" />
         <input type="text" placeholder="Phone" />
       </div>
-      <div></div>
       <textarea cols="50" rows="10" />
       <br />
       <button>Send</button>

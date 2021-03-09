@@ -12,12 +12,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 .silver-text {
   background: linear-gradient(to right, darkgrey 20%, white 50%, darkgrey 80%);
   background-clip: text;
@@ -57,7 +55,7 @@ code {
   text-shadow: 1px 1px 2px black;
 }
 .frosted-glass {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 
