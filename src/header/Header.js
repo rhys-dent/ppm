@@ -4,6 +4,8 @@ import Context from "../Context";
 import NavLink from "./NavLink";
 import Logo from "./Logo";
 import MenuButton from "./MenuButton";
+import { Link } from "react-router-dom";
+import GoldNavLink from "../common/GoldNavLink";
 
 const HeaderS = styled.header`
   position: relative;
@@ -48,7 +50,9 @@ export default function () {
           />
           <NavLinksS ref={navLinks}>
             {context.mains.map((main) => (
-              <NavLink {...main} />
+              <Link to={main.path}>
+                <GoldNavLink>{main.title}</GoldNavLink>
+              </Link>
             ))}
           </NavLinksS>
         </MenuS>

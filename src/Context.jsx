@@ -328,8 +328,20 @@ export function Provider({ children }) {
         },
       },
       faq: { display: mobile ? "block" : "grid" },
-      safetyAndSecurity: { flexDirection: mobile ? "column" : "row" },
-      pricing: { display: mobile ? "block" : "grid" },
+      safetyAndSecurity: {
+        flexDirection: mobile ? "column" : "row",
+        securitySystem: {
+          width: mobile ? "100%" : "25%",
+          margin: mobile ? "1rem" : "0 auto",
+        },
+      },
+      pricing: {
+        display: mobile ? "block" : "grid",
+        pricingModule: {
+          width: mobile ? "100%" : "25%",
+          margin: mobile ? "1rem" : "0 auto",
+        },
+      },
       contactUs: { emailForm: { width: mobile ? "100%" : "50%" } },
     },
   };

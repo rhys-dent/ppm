@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import styled from "styled-components";
+import GoldTitle from "../../common/GoldTitle";
 import Context from "../../Context";
 import FAQ from "./FAQ";
 
@@ -13,6 +14,7 @@ const FAQsS = styled.article`
     box-sizing: border-box;
     margin: 1rem;
     padding: 8rem;
+    font-weight: normal;
   }
 `;
 
@@ -20,7 +22,9 @@ export default function () {
   const context = useContext(Context);
   return (
     <FAQsS>
-      <h1 className="main-title ">Frequently Asked Question</h1>
+      <h1>
+        <GoldTitle>Frequently Asked Question</GoldTitle>
+      </h1>
       {context.faqs.map((faq) => (
         <FAQ {...faq} />
       ))}

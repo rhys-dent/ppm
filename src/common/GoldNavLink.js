@@ -7,6 +7,10 @@ const GoldTextS = styled.div`
       height: 100%;
       width: 100%;
     }
+    .black-back-on-hover {
+      box-shadow: 0 0 1px black;
+      border-radius: 0;
+    }
   }
 `;
 const margin = "2px";
@@ -28,8 +32,10 @@ const BlackBackS = styled.div`
   background-color: black;
   text-shadow: 0 0 8px gold;
 
-  box-shadow: 0 0 1px black;
+  box-shadow: 0 0 8px black;
+  border-radius: 4px;
   padding: calc(${margin} * 2);
+  transition: box-shadow 0.25s ease-in-out;
 `;
 const OutLineTL = styled.div`
   position: absolute;
@@ -38,7 +44,7 @@ const OutLineTL = styled.div`
   background-image: url("backgrounds/gold-gradient-text.png");
   background-size: 100% 100%;
   box-shadow: 0 0 1px gold;
-  transition: height 0.5s ease-in-out, width 0.5s ease-in-out;
+  transition: height 0.25s ease-in-out, width 0.25s ease-in-out;
 `;
 const OutLineBR = styled.div`
   position: absolute;
@@ -49,14 +55,14 @@ const OutLineBR = styled.div`
   background-image: url("backgrounds/gold-gradient-text.png");
   background-size: 100% 100%;
   box-shadow: 0 0 1px gold;
-  transition: height 0.5s ease-in-out, width 0.5s ease-in-out;
+  transition: height 0.25s ease-in-out, width 0.25s ease-in-out;
 `;
 export default function ({ children }) {
   return (
     <GoldTextS>
       <OutLineTL className="on-hover" />
       <OutLineBR className="on-hover" />
-      <BlackBackS>{children}</BlackBackS>
+      <BlackBackS className="black-back-on-hover">{children}</BlackBackS>
       <TextS>{children}</TextS>
     </GoldTextS>
   );

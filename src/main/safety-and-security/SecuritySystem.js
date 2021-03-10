@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 const SecuritySystemS = styled.section`
   box-sizing: border-box;
-  width: 25%;
-  margin: 0 auto;
+  width: ${(props) => props.theme.main.safetyAndSecurity.securitySystem.width};
+  padding: ${(props) =>
+    props.theme.main.safetyAndSecurity.securitySystem.margin};
 `;
 const InnerS = styled.div`
   box-sizing: border-box;
