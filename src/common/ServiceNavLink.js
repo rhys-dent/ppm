@@ -39,7 +39,7 @@ const BlackBackS = styled.div`
   margin: ${margin};
   position: absolute;
   top: 0;
-  text-shadow: 0 0 0.5px gold;
+  text-shadow: 0 0 0.5px grey;
   padding: calc(${margin} * 2);
   transition: text-shadow 0.125s ease-in-out;
 `;
