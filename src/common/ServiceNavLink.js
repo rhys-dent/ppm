@@ -26,7 +26,7 @@ const TextS = styled.div`
   background-color: transparent;
   background-image: url("backgrounds/gold-gradient-text.png");
   background-clip: text;
-  --webkit-background-clip: text;
+  -webkit-background-clip: text;
   background-size: 100% 100%;
   background-position: center;
   color: transparent;

@@ -50,7 +50,7 @@ export default function () {
           />
           <NavLinksS ref={navLinks}>
             {context.mains.map((main) => (
-              <Link to={main.path}>
+              <Link to={main.path} onClick={() => context.refresh()}>
                 <GoldNavLink>{main.title}</GoldNavLink>
               </Link>
             ))}
