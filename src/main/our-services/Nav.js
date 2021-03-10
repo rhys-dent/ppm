@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import styled from "styled-components";
 import Context from "../../Context";
-import SilverText from "../../common/SilverText";
+import ServiceNavLink from "../../common/ServiceNavLink";
 
 const NavS = styled.nav`
   background-color: firebrick;
@@ -9,10 +9,11 @@ const NavS = styled.nav`
   height: ${(props) => props.theme.main.height};
   width: ${(props) => props.theme.main.ourServices.nav.width};
   left: -${(props) => props.theme.main.ourServices.nav.width};
-  background: linear-gradient(to right, black 0%, #515151 50%, black 100%);
+  background: linear-gradient(to right, black 0%, #515151 100%);
   text-align: center;
-  box-shadow: 8px 0px 4px black;
+  box-shadow: 2px 0 4px black;
   animation: anim 1s 0s forwards;
+
   @keyframes anim {
     0% {
     }
@@ -28,7 +29,7 @@ const NavS = styled.nav`
 `;
 const MenuS = styled.section`
   box-sizing: border-box;
-  height: 80%;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -45,11 +46,10 @@ export default function () {
   const context = useContext(Context);
   return (
     <NavS>
-      <h2 className="white-smoke-title">Our Services</h2>
       <MenuS>
         {context.services.map((service) => (
           <a href={service.href}>
-            <SilverText text={service.title} />
+            <ServiceNavLink>{service.title}</ServiceNavLink>
           </a>
         ))}
       </MenuS>

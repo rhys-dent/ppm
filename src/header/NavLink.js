@@ -47,7 +47,7 @@ const OutlineBR = styled.div`
 export default function ({ title, path }) {
   const context = useContext(Context);
   return (
-    <Link to={path}>
+    <Link to={path} onClick={() => context.refresh()}>
       <NavLinkS>
         <OutlineTL />
         <OutlineBR />

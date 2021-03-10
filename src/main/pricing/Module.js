@@ -2,11 +2,14 @@ import styled from "styled-components";
 
 const PricingModuleS = styled.section`
   box-sizing: border-box;
-  width: 75%;
-  padding: 5%;
-  margin: 5% auto;
+  width: 30%;
+  padding: 1rem;
+  h3 {
+    padding-bottom: 1rem;
+  }
   div {
-    padding-top: 1rem;
+    box-sizing: border-box;
+    font-size: 1rem;
   }
 `;
 export default function ({ title, text }) {

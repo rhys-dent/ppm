@@ -328,7 +328,7 @@ export function Provider({ children }) {
         },
       },
       faq: { display: mobile ? "block" : "grid" },
-      safetyAndSecurity: { display: mobile ? "block" : "grid" },
+      safetyAndSecurity: { flexDirection: mobile ? "column" : "row" },
       pricing: { display: mobile ? "block" : "grid" },
       contactUs: { emailForm: { width: mobile ? "100%" : "50%" } },
     },
