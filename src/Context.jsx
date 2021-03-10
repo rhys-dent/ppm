@@ -30,31 +30,31 @@ const serviceTitles = [
     title: "Guest Management",
     text:
       "Prometheus will handle all guest communication, from beginning to end. Utilizing automated messaging templates, as well as personal communication with our management team, we will manage the entire guest experience.",
-    icon: "icons/guest-management-icon.png",
+    icon: "test-icons/guest-management-logo-basic.png",
   },
   {
     title: "Professional Photography",
     text:
       "The quality of your photos makes or breaks your Airbnb. We will arrange for our professional photographer to stage the unit and create beautiful high quality listing photos of your unit.",
-    icon: "icons/photography-icon.png",
+    icon: "test-icons/guest-management-logo-outline.png",
   },
   {
     title: "Professional Cleaning",
     text:
       "Your unit will be kept in 'for sale' condition at all times. Prometheus utilizes automated scheduling software to ensure that the unit is professionally cleaned after each stay.",
-    icon: "icons/cleaning-icon.png",
+    icon: "test-icons/guest-management-logo-outlined-white-shadow.png",
   },
   {
     title: "Listing Creation and Optimization",
     text:
       "Our team will list your unit across multiple booking platforms and the coordinate the calendar through a central channel manager to maximize booking revenue and minimize vacancy for your Airbnb.",
-    icon: "icons/listing-icon.png",
+    icon: "test-icons/guest-management-logo-outlined-light-shadow.png",
   },
   {
     title: "Staging and Design",
     text:
       "Prometheus will design and stage your unit to the highest standard, procuring all necessary furnishings and decor to make your Airbnb a success. All of the necessary set up is handled by our management team, freeing you from this major time-consuming task.",
-    icon: "icons/staging-icon.png",
+    icon: "test-icons/guest-management-logo-outlined-dark-shadow.png",
   },
   {
     title: "Price Optimization",
@@ -315,16 +315,27 @@ export function Provider({ children }) {
         safetyAndSecurity: {
           flexDirection: mobile ? "column" : "row",
         },
+        ourServices: {
+          padding: mobile ? "5%" : "20%",
+          service: { padding: mobile ? "2.5%" : "10%" },
+        },
+        contactUs: {
+          padding: mobile ? "2.5%" : "10% 20%",
+        },
       },
       ourServices: {
+        paddingBottom: mobile ? "5%" : "0",
         nav: {
           width: mobile ? "100px" : "250px",
           navLink: { fontSize: mobile ? ".75em" : "1em" },
+          fontSize: mobile ? ".75rem" : "1rem",
         },
         service: {
           display: mobile ? "block" : "grid",
           icon: { order: mobile ? -1 : 1 },
           info: { order: mobile ? 1 : 0 },
+          height: mobile ? "100%" : px.main.height / 2 + "px",
+          width: mobile ? "90%" : "80%",
         },
       },
       faq: { display: mobile ? "block" : "grid" },
@@ -338,11 +349,14 @@ export function Provider({ children }) {
       pricing: {
         display: mobile ? "block" : "grid",
         pricingModule: {
-          width: mobile ? "100%" : "25%",
-          margin: mobile ? "1rem" : "0 auto",
+          width: mobile ? "100%" : "30%",
+          margin: mobile ? "1rem" : "1rem",
         },
       },
-      contactUs: { emailForm: { width: mobile ? "100%" : "50%" } },
+      contactUs: {
+        padding: mobile ? "2.5%" : " 0% 20% 0 20%;",
+        emailForm: { width: mobile ? "100%" : "50%" },
+      },
     },
   };
   return (

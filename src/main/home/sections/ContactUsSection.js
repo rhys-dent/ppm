@@ -6,7 +6,7 @@ const ContactUsSectionS = styled.section`
 `;
 const InnerS = styled.div`
   box-sizing: border-box;
-  padding: 10% 25%;
+  padding: ${(props) => props.theme.main.home.contactUs.padding};
   h1 {
     padding: 1rem;
     font-size: 3rem;

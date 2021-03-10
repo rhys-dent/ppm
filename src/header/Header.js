@@ -24,13 +24,12 @@ const MenuS = styled.article`
 `;
 const NavLinksS = styled.ul`
   height: ${(props) => props.theme.header.nav.menu.navLinks.height};
-
   display: ${(props) => props.theme.header.nav.menu.navLinks.display};
   flex-direction: ${(props) =>
     props.theme.header.nav.menu.navLinks.flexDirection};
   justify-content: space-evenly;
   align-items: center;
-
+  height: 100%;
   list-style: none;
 `;
 export default function () {

@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 const ServiceS = styled.div`
-  height: ${(props) => props.theme.main.height};
+  --main-height: ${(props) => props.theme.main.height};
+  --height: calc(var(--main-height) / 2);
+  min-height: var(--main-height);
+  padding-bottom: calc(var(--main-height) / 4);
 `;
 const InnerBoxS = styled.div`
   --main-height: ${(props) => props.theme.main.height};
@@ -10,12 +13,11 @@ const InnerBoxS = styled.div`
   position: relative;
   display: ${(props) => props.theme.main.ourServices.service.display};
   grid-template-columns: auto min-content;
-  height: var(--height);
-  width: 80%;
+  height: ${(props) => props.theme.main.ourServices.service.height};
+  width: ${(props) => props.theme.main.ourServices.service.width};
   margin: 0 auto;
   top: calc(var(--height) / 2);
   img {
-    opacity: 0.5;
     order: ${(props) => props.theme.main.ourServices.service.icon.order};
     height: calc(var(--height));
   }

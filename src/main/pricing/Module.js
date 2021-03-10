@@ -3,7 +3,8 @@ import styled from "styled-components";
 const PricingModuleS = styled.section`
   box-sizing: border-box;
   width: ${(props) => props.theme.main.pricing.pricingModule.width};
-  padding: ${(props) => props.theme.main.pricing.pricingModule.margin};
+  margin: ${(props) => props.theme.main.pricing.pricingModule.padding};
+  padding: 1rem;
   h3 {
     padding-bottom: 1rem;
   }

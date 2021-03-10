@@ -40,6 +40,7 @@ const MenuS = styled.section`
     width: 80%;
     text-align: center;
     margin: 0 auto;
+    font-size: ${(props) => props.theme.main.ourServices.nav.fontSize};
   }
 `;
 export default function () {

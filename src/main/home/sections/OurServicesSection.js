@@ -5,12 +5,11 @@ import Context from "../../../Context";
 const OurServiceSection = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
-
+  padding: ${(props) => props.theme.main.home.ourServices.padding};
   div {
     box-sizing: border-box;
-    width: 100%;
+    padding: ${(props) => props.theme.main.home.ourServices.service.padding};
     margin: 0 auto;
-    padding: 25%;
   }
 `;
 const InnerS = styled.span`
