@@ -6,7 +6,7 @@ import EmailForm from "./EmailForm";
 const ContactUsSectionS = styled.section`
   box-sizing: border-box;
   min-height: ${(props) => props.theme.main.height};
-  padding: 10% 20% 0 20%;
+  padding: 0% 20% 0 20%;
   h1 {
     font-size: 3rem;
     text-align: center;

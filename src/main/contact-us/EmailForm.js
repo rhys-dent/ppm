@@ -3,7 +3,8 @@ import styled from "styled-components";
 const EmailFormS = styled.form`
   width: 100%;
   margin: 0 auto;
-
+  box-sizing: border-box;
+  padding: 1rem;
   div {
     display: grid;
     grid-template-columns: 1fr 1fr;
