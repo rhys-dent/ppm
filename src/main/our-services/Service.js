@@ -34,7 +34,7 @@ const InfoS = styled.div`
 export default function (props) {
   return (
     <ServiceS id={props.id}>
-      <InnerBoxS className="frosted-glass">
+      <InnerBoxS className="frosted-glass-black">
         <img src={props.icon} />
         <InfoS>
           <h2 className="white-smoke-title">{props.title}</h2>
