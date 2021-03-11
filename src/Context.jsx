@@ -13,7 +13,7 @@ import ContactUsSection from "./main/home/sections/ContactUsSection";
 import SafetySecuritySection from "./main/home/sections/SafetySecuritySection";
 //DATA
 //constants
-const IMAGE_EXTENSION = ".png";
+const IMAGE_EXTENSION = ".jpg";
 const SIZE = "-4096";
 const IMAGE_DIRECTORY = "backgrounds/desktop";
 //Lists and Keys
@@ -328,7 +328,7 @@ export function Provider({ children }) {
         nav: {
           width: mobile ? "100px" : "250px",
           navLink: { fontSize: mobile ? ".75em" : "1em" },
-          fontSize: mobile ? ".75rem" : "1rem",
+          fontSize: mobile ? ".5rem" : "1rem",
         },
         service: {
           display: mobile ? "block" : "grid",
@@ -338,7 +338,10 @@ export function Provider({ children }) {
           width: mobile ? "90%" : "80%",
         },
       },
-      faq: { display: mobile ? "block" : "grid" },
+      faqs: {
+        display: mobile ? "block" : "grid",
+        faq: { padding: mobile ? "0 .5rem 0 .5rem" : "0 1rem 0 1rem" },
+      },
       safetyAndSecurity: {
         flexDirection: mobile ? "column" : "row",
         securitySystem: {

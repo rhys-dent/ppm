@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import emailjs, { init } from "emailjs-com";
 
 const EmailFormS = styled.form`
   width: 100%;
@@ -28,15 +29,36 @@ const EmailFormS = styled.form`
 `;
 
 export default function () {
+  init("user_0aXrjbQ2eRrhjw2lcewWO");
+  function submit(e) {
+    e.preventDefault();
+    console.log(e.target);
+    emailjs
+      .sendForm(
+        "service_xb1sh98",
+        "template_9yrb69b",
+        e.target,
+        "user_0aXrjbQ2eRrhjw2lcewWO"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  }
   return (
-    <EmailFormS className="frosted-glass">
+    <EmailFormS onSubmit={submit} className="frosted-glass">
       <div>
-        <input type="text" placeholder="First Name" />
-        <input type="text" placeholder="Last Name" />
-        <input type="text" placeholder="Email" />
-        <input type="text" placeholder="Phone" />
+        <input type="text" placeholder="First Name" name="first_name" />
+        <input type="text" placeholder="Last Name" name="last_name" />
+        <input type="text" placeholder="Email" name="email" />
+        <input type="text" placeholder="Phone" name="phone" />
       </div>
-      <textarea cols="50" rows="10" />
+      <textarea cols="50" rows="10" name="message" />
       <br />
       <button>Send</button>
     </EmailFormS>

@@ -7,13 +7,12 @@ import FAQ from "./FAQ";
 const FAQsS = styled.article`
   min-height: ${(props) => props.theme.main.height};
   width: 100%;
-  display: ${(props) => props.theme.main.faq.display};
+  display: ${(props) => props.theme.main.faqs.display};
   grid-template-columns: 1fr 1fr;
 
   h1 {
     box-sizing: border-box;
     margin: 1rem;
-    padding: 8rem;
     font-weight: normal;
   }
 `;
