@@ -300,9 +300,10 @@ export function Provider({ children }) {
       nav: {
         menu: {
           marginLeft: mobile ? "auto" : "0",
+          position: mobile ? "absolute" : "relative",
           menuButton: { display: mobile ? "block" : "none" },
           navLinks: {
-            height: mobile ? "200%" : "100%",
+            height: mobile ? px.main.height + "px" : "100%",
             display: mobile ? "none" : "flex",
             flexDirection: mobile ? "column" : "row",
           },

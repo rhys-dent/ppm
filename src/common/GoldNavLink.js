@@ -2,6 +2,7 @@ import styled from "styled-components";
 const GoldTextS = styled.div`
   display: inline-block;
   position: relative;
+
   :hover {
     .on-hover {
       height: 100%;

@@ -16,20 +16,26 @@ const HeaderS = styled.header`
   box-shadow: 0 4px 8px black;
 `;
 const NavS = styled.nav`
+  position: relative;
   display: grid;
   grid-template-columns: min-content auto;
 `;
 const MenuS = styled.article`
+  height: ${(props) => props.theme.header.nav.menu.navLinks.height};
+  position: ${(props) => props.theme.header.nav.menu.position};
+  top: 0;
   margin-left: ${(props) => props.theme.header.nav.menu.marginLeft};
+  width: 100%;
 `;
 const NavLinksS = styled.ul`
-  height: ${(props) => props.theme.header.nav.menu.navLinks.height};
   display: ${(props) => props.theme.header.nav.menu.navLinks.display};
+
   flex-direction: ${(props) =>
     props.theme.header.nav.menu.navLinks.flexDirection};
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
+  width: 100%;
   list-style: none;
 `;
 export default function () {
