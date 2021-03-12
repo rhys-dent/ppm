@@ -1,6 +1,6 @@
+import { useContext } from "react";
 import styled from "styled-components";
-import EmailForm from "../../contact-us/EmailForm";
-
+import Context from "../../../Context";
 const ContactUsSectionS = styled.section`
   min-height: ${(props) => props.theme.main.height};
 `;
@@ -10,14 +10,25 @@ const InnerS = styled.div`
   h1 {
     padding: 1rem;
     font-size: 3rem;
+    margin: 1rem;
+  }
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 `;
 export default function () {
+  const context = useContext(Context);
   return (
     <ContactUsSectionS>
       <InnerS>
-        <h1 className="white-smoke-title">Contact Us</h1>
-        <EmailForm />
+        <h1 className="white-smoke-title">Pricing</h1>
+        <div>
+          {context.pricingModules.map((module) => (
+            <h1 className="frosted-glass">{module.title}</h1>
+          ))}
+        </div>
       </InnerS>
     </ContactUsSectionS>
   );

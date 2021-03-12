@@ -33,7 +33,6 @@ const BlackBackS = styled.div`
   top: 0;
   background-color: black;
   text-shadow: 0 0 8px gold;
-
   box-shadow: 0 0 8px black;
   border-radius: 4px;
   padding: calc(${margin} * 2);

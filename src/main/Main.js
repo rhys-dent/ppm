@@ -6,10 +6,11 @@ import Context from "../Context";
 const MainS = styled.main`
   height: ${(props) => props.theme.main.height};
   overflow-y: hidden;
+  overflow-x: hidden;
 `;
 export default function () {
   const context = useContext(Context);
-
+  const [scroll, setScroll] = useState();
   const ref = useRef();
   useEffect(() => {
     ref.current.style.overflowY =
@@ -18,10 +19,10 @@ export default function () {
   });
   return (
     <Switch>
-      <MainS ref={ref}>
+      <MainS ref={ref} onScroll={(e) => setScroll(e.target.scrollTop)}>
         {context.mains.map((main) => (
           <FixedBackground url={main.backgroundUrl}>
-            <Route path={main.path} component={main.Component} />
+            <Route path={main.path}>{<main.Component scroll={scroll} />}</Route>
           </FixedBackground>
         ))}
       </MainS>

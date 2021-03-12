@@ -317,11 +317,12 @@ export function Provider({ children }) {
           flexDirection: mobile ? "column" : "row",
         },
         ourServices: {
-          padding: mobile ? "5%" : "20%",
-          service: { padding: mobile ? "2.5%" : "10%" },
+          padding: mobile ? "2.5%" : "10%",
+          gridTemplateColumns: mobile ? "1fr 1fr" : "1fr 1fr 1fr 1fr",
+          service: { padding: mobile ? "2.5%" : "5%" },
         },
         contactUs: {
-          padding: mobile ? "2.5%" : "10% 20%",
+          padding: mobile ? "2.5%" : "10% 10%",
         },
       },
       ourServices: {

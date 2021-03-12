@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
 import styled from "styled-components";
 import FixedBackground from "../../common/FixedBackground";
 import Context from "../../Context";
@@ -8,12 +8,14 @@ const HomeS = styled.article`
   min-height: 100%;
   text-align: center;
 `;
-export default function () {
+export default function ({ scroll }) {
   const context = useContext(Context);
+  const home = useRef();
+  useEffect(() => {});
   return (
-    <HomeS>
+    <HomeS ref={home}>
       {context.homeSections.map((homeSection) => (
-        <Frame title={homeSection.title}>
+        <Frame scroll={scroll} title={homeSection.title}>
           <FixedBackground url={homeSection.backgroundUrl}>
             <homeSection.Component {...homeSection} />
           </FixedBackground>

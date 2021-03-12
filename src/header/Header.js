@@ -21,7 +21,7 @@ const NavS = styled.nav`
   grid-template-columns: min-content auto;
 `;
 const MenuS = styled.article`
-  height: ${(props) => props.theme.header.nav.menu.navLinks.height};
+  height: 100%;
   position: ${(props) => props.theme.header.nav.menu.position};
   top: 0;
   margin-left: ${(props) => props.theme.header.nav.menu.marginLeft};
@@ -41,16 +41,21 @@ const NavLinksS = styled.ul`
 export default function () {
   const context = useContext(Context);
   const navLinks = useRef();
+  const menu = useRef();
   return (
     <HeaderS>
       <NavS>
         <Logo />
-        <MenuS>
+        <MenuS ref={menu}>
           <MenuButton
             onClick={() => {
               const display = navLinks.current.style.display;
               navLinks.current.style.display =
                 display === "flex" ? "none" : "flex";
+              const mainHeight = context.theme.main.height;
+              const height = menu.current.style.height;
+              menu.current.style.height =
+                height === mainHeight ? "100%" : mainHeight;
             }}
           />
           <NavLinksS ref={navLinks}>
