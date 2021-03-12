@@ -4,6 +4,7 @@ import Context from "../../../Context";
 import FixedBackground from "../../../common/FixedBackground";
 
 const SafetyAndSecuritySection = styled.section`
+  box-sizing: border-box;
   min-height: ${(props) => props.theme.main.height};
   padding: 2rem;
   display: flex;

@@ -4,9 +4,12 @@ import Context from "../../Context";
 const FrameS = styled.section`
   position: relative;
   height: ${(props) => props.theme.main.height};
+  margin-bottom: 100px;
   .guest-reviews {
-    background-color: darkgray;
-    height: 3rem;
+    height: 100px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 0 16px black;
   }
 `;
 const ChildrenS = styled.section`
@@ -82,6 +85,7 @@ export default function ({ children, title, scroll = 0 }) {
         <BL className="frosted-glass-black" />
         <BR className="frosted-glass-black" />
       </Corners>
+      <h1 class="frosted-glass guest-reviews">Guest Review</h1>
     </FrameS>
   );
 }
