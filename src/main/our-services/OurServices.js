@@ -13,7 +13,7 @@ const ServicesS = styled.section`
   margin-left: var(--width);
 `;
 
-export default function () {
+export default function ({ setScrollbar }) {
   const context = useContext(Context);
   return (
     <OurServicesS>

@@ -13,7 +13,6 @@ function App() {
       <Router>
         <Header />
         <Main refresher={context.state} />
-        <Footer />
       </Router>
     </ThemeProvider>
   );
