@@ -23,6 +23,7 @@ const Corners = styled.div`
   height: inherit;
   div {
     transition: height 0s linear, width 0s linear;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 `;
 const TL = styled.div`
@@ -80,10 +81,10 @@ export default function ({ children, title, scroll = 0 }) {
     <FrameS ref={frame}>
       <ChildrenS>{children}</ChildrenS>
       <Corners ref={corners}>
-        <TL className="frosted-glass-black" />
-        <TR className="frosted-glass-black" />
-        <BL className="frosted-glass-black" />
-        <BR className="frosted-glass-black" />
+        <TL className="" />
+        <TR className="" />
+        <BL className="" />
+        <BR className="" />
       </Corners>
       <h1 class="frosted-glass guest-reviews">Guest Review</h1>
     </FrameS>
